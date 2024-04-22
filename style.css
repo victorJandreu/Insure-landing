@@ -24,62 +24,10 @@ body{
 
 /* general */
 
-.div-ul-menu{
-    background-color: var(--very-dark-violet);
-    position: fixed;
-    width: 100vw;
-    z-index: 5;
-    left: 0;
-    height: calc(100vh - 60px);
-    bottom: 0;
-    text-align: center;
-    overflow: hidden;
-}
 
-.div-ul-menu ul{
-    margin: 0;
-    padding-top: 3rem;
-    display: grid;
-    gap: 25px;
-    position: relative;
-    z-index: 20;
-    background-color: var(--very-dark-violet);
-}
-
-.div-ul-menu a{
-    color: var(--very-light-gray);
-    text-transform: uppercase;
- 
-}
-
-.div-ul-menu li:last-child a{
+.show{
     display: block;
-    border: 2px solid var(--very-light-gray);
-    width: calc(100% - (var(--inline) * 2));
-    padding-block: .7rem;
-    margin: 0 auto;
-
 }
-
-
-#nav-patter{
-    bottom: 0;
-    right: 0;
-    width: 100%;
-}
-
-.nav-menu-open{
-    background-color: white;
-    position: fixed;
-    width: 100vw;
-    z-index: 5;
-    left: 0;
-    height: 60px;
-    margin: 0;
-    top: 0;
-}
-
-
 
 .notShow{
     display: none;
@@ -87,10 +35,6 @@ body{
 
 .pattern{
     position: absolute;
-}
-
-header, main, footer{
-    width: 100vw;
 }
 
 h1,
@@ -119,10 +63,14 @@ ul{
     padding: 0;
 }
 
-a, button{
+a, 
+button,
+.media svg{
     cursor: pointer;
 }
-
+.media svg:hover path{
+    fill: black;
+}
 
 .grid a,
 .find a{
@@ -136,11 +84,12 @@ a, button{
 /* header */
 
 header nav{
-    padding: var(--inline);
+    padding-inline: var(--inline);
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
+   
 }
 
 header nav button{
@@ -148,20 +97,85 @@ header nav button{
     background: none;
 }
 
+nav div{
+    display: none;
+}
+
+
+.nav-menu-open{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    left: 0;
+    height: 60px;
+    margin: 0;
+    top: 0;
+
+}
+
+
+.div-ul-menu{
+    background-color: var(--very-dark-violet);
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    left: 0;
+    height: calc(100vh - 60px);
+    bottom: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.div-ul-menu ul{
+    margin: 0;
+    padding-top: 3rem;
+    display: grid;
+    gap: 25px;
+    position: relative;
+    z-index: 20;
+    background-color: var(--very-dark-violet);
+   
+}
+
+.div-ul-menu a{
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+ 
+}
+
+.div-ul-menu li:last-child a{
+    display: block;
+    border: 2px solid var(--very-light-gray);
+    width: calc(90vw - (var(--inline) * 2));
+    padding-block: .7rem;
+    margin: 0 auto;
+}
+
+
+#nav-patter{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
 
 
 .grid{
-
     display: grid;
     gap: 0;
     grid-template-rows: 1fr 430px 200px;
     grid-column: 1fr;
     position: relative;
-  
 }
 
+
+
+
 .family{
-  width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .text{
@@ -205,7 +219,14 @@ header hr{
     right: 0;
 }
 
+.btn-link{
+    font-weight: 800;
+}
 
+.btn-link:hover{
+    background-color: white;
+    color: var(--dark-violet);
+}
 
 
 /* MAIN */
@@ -245,7 +266,7 @@ main p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     height: 340px;
     background-color: var(--dark-violet);
     padding-inline: var(--inline);
@@ -330,3 +351,204 @@ footer ul{
     flex-direction: column;
     gap: 10px;
 }
+
+
+.desk{
+    display: none;
+}
+
+.top-hr{
+    display: none;
+}
+
+.violet{
+    display: none;
+}
+
+
+#div-menu ul li:last-child a:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+@media (min-width: 750px) {
+    #div-menu a:hover{
+        color: black;
+        font-weight: 600;
+    }
+    
+    #div-menu ul li:last-child a{
+        padding: .5rem 1rem;
+    }
+
+    :root{
+        --inline: 8vw;
+    }
+
+
+    .mobile{
+        display: none;
+    }
+
+    .desk{
+        display: block;
+    }
+
+    #btn{
+        display: none;
+    }
+
+    #div-menu{
+        display: block;
+    }
+    #div-menu ul{
+        display: flex;
+        gap: 20px;
+    }
+
+    #div-menu ul a{
+        color: var(--dark-grayish-violet);
+        text-transform: uppercase;
+    }
+
+
+    .grid{
+        grid-template-rows: 100px 1fr 70px 70px 100px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .top-hr{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: end;
+        justify-content: flex-start;
+    }
+
+    hr{
+        padding: 0;
+        margin: 0;
+        margin-left: var(--inline);
+    }
+
+    header hr{
+        width: 100px;
+    }
+    
+
+    .grid-div{
+        position: relative;
+        z-index: 3;
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+        padding-right: var(--inline);
+    }
+
+    .text{
+        position: relative;
+        z-index: 3;
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        place-content: start;
+        text-align: left;
+    }
+
+    h1{
+        margin-top: 0;
+    }
+
+    .hr{
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: end;
+        justify-content: flex-start;
+    }
+
+
+
+    .violet{
+        display: block;
+        position: relative;
+        z-index: 1;
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+        background-color: var(--dark-violet);
+    }
+
+
+    
+    #intro-right{
+        z-index: 60;
+        top: 0;
+        right: 0;
+        width: 28%;
+    }
+    #intro{
+        z-index: 60;
+        bottom: 0;
+        left: 0;
+        width: 10%;
+    }
+
+    .grid a{
+        margin: 0;
+    }
+    
+    main {
+        text-align: left;
+    }
+    .articles{
+        flex-direction: row;
+    }
+    .find{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        --inline: 3rem;
+        overflow: hidden;
+        height: 200px;
+ 
+    }
+
+  .find div{
+    margin-left: auto;
+  }
+
+  .find a {
+   display: block;
+  }
+
+    .find h3{
+        max-width: 320px;
+    }
+    #how-work-desk{
+        right: 0;
+    }
+
+    .footer-1{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-2{
+        display: flex;
+        padding-inline: var(--inline);
+        gap: 7vw;
+    }
+
+    #footer-desk{
+        top: 0;
+    }
+
+  }

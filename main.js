@@ -9,5 +9,5 @@ btn.addEventListener("click", function(){
    closeLogo.classList.toggle("notShow")
    navHeader.classList.toggle("nav-menu-open")
    divMenu.classList.toggle("div-ul-menu")
-   divMenu.classList.toggle("notShow")
+   divMenu.classList.toggle("show")
 })
