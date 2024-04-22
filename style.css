@@ -90,7 +90,7 @@ body{
 }
 
 header, main, footer{
-    width: 100%;
+    width: 100vw;
 }
 
 h1,
@@ -148,15 +148,20 @@ header nav button{
     background: none;
 }
 
-.family{
-    width: 100%;
-}
+
 
 .grid{
+
     display: grid;
     gap: 0;
     grid-template-rows: 1fr 430px 200px;
+    grid-column: 1fr;
     position: relative;
+  
+}
+
+.family{
+  width: 100vw;
 }
 
 .text{
@@ -295,6 +300,8 @@ footer{
 #footer-pattern{
     top: 0;
     left: 0;
+    width: 100%;
+    max-width: 400px;
 }
 
 .footer-2{
