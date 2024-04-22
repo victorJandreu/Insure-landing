@@ -27,10 +27,10 @@ body{
 .div-ul-menu{
     background-color: var(--very-dark-violet);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 5;
     left: 0;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
     bottom: 0;
     text-align: center;
     overflow: hidden;
@@ -38,7 +38,7 @@ body{
 
 .div-ul-menu ul{
     margin: 0;
-    padding-top: 4rem;
+    padding-top: 3rem;
     display: grid;
     gap: 25px;
     position: relative;
@@ -71,10 +71,10 @@ body{
 .nav-menu-open{
     background-color: white;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 5;
     left: 0;
-    height: 50px;
+    height: 60px;
     margin: 0;
     top: 0;
 }
@@ -140,7 +140,7 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 60px;
 }
 
 header nav button{
